@@ -120,30 +120,4 @@ function wp_mill33_subscribe_form($atts) {
 	return $output_string;
 }
 
-function mill33_subscribe() {
-	
-	$data = array(
-		'email' => 'tjd@q7.io',
-		'email_format' => 'text',
-	);
-	
-	$headers = array(
-		'Authorization' => 'Token token="9ef60299b732c3649a416c61b983cb7f"',
-	);
-	
-	$options = array(
-		'headers' => $headers,
-	);
-		
-	
-	$response = http_post_fields(
-		'http://clients.mill33.com/api/subscriber_lists/952/subscribers',
-		$data,
-		array(),
-		$options
-	);
-	
-	echo "\$response: $response\n";
-		
-}
 
